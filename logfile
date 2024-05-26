@@ -1,0 +1,14 @@
+2024-05-26 20:32:36.141 CST [27267] LOG:  starting PostgreSQL 16.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 14.1.1 20240507, 64-bit
+2024-05-26 20:32:36.142 CST [27267] LOG:  listening on IPv6 address "::1", port 5432
+2024-05-26 20:32:36.142 CST [27267] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-05-26 20:32:36.142 CST [27267] LOG:  listening on Unix socket "/run/postgresql/.s.PGSQL.5432"
+2024-05-26 20:32:36.146 CST [27270] LOG:  database system was shut down at 2024-05-26 20:32:19 CST
+2024-05-26 20:32:36.151 CST [27267] LOG:  database system is ready to accept connections
+2024-05-26 20:32:45.022 CST [27298] FATAL:  role "postgres" does not exist
+2024-05-26 20:33:27.196 CST [27611] FATAL:  database "database_final_dev" does not exist
+2024-05-26 20:33:27.196 CST [27612] FATAL:  database "database_final_dev" does not exist
+2024-05-26 20:33:28.279 CST [27614] FATAL:  database "database_final_dev" does not exist
+2024-05-26 20:37:36.242 CST [27268] LOG:  checkpoint starting: time
+2024-05-26 20:39:16.887 CST [27268] LOG:  checkpoint complete: wrote 1006 buffers (6.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=100.599 s, sync=0.038 s, total=100.645 s; sync files=342, longest=0.001 s, average=0.001 s; distance=4818 kB, estimate=4818 kB; lsn=0/19A4890, redo lsn=0/19A4858
+2024-05-26 20:47:37.085 CST [27268] LOG:  checkpoint starting: time
+2024-05-26 20:47:39.719 CST [27268] LOG:  checkpoint complete: wrote 27 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.610 s, sync=0.015 s, total=2.634 s; sync files=21, longest=0.002 s, average=0.001 s; distance=2 kB, estimate=4336 kB; lsn=0/19A5188, redo lsn=0/19A5150
