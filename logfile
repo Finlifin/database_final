@@ -12,3 +12,18 @@
 2024-05-26 20:39:16.887 CST [27268] LOG:  checkpoint complete: wrote 1006 buffers (6.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=100.599 s, sync=0.038 s, total=100.645 s; sync files=342, longest=0.001 s, average=0.001 s; distance=4818 kB, estimate=4818 kB; lsn=0/19A4890, redo lsn=0/19A4858
 2024-05-26 20:47:37.085 CST [27268] LOG:  checkpoint starting: time
 2024-05-26 20:47:39.719 CST [27268] LOG:  checkpoint complete: wrote 27 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.610 s, sync=0.015 s, total=2.634 s; sync files=21, longest=0.002 s, average=0.001 s; distance=2 kB, estimate=4336 kB; lsn=0/19A5188, redo lsn=0/19A5150
+2024-05-26 20:57:37.918 CST [27268] LOG:  checkpoint starting: time
+2024-05-26 20:57:41.764 CST [27268] LOG:  checkpoint complete: wrote 39 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.811 s, sync=0.026 s, total=3.846 s; sync files=37, longest=0.005 s, average=0.001 s; distance=158 kB, estimate=3919 kB; lsn=0/19CCA10, redo lsn=0/19CC9D8
+2024-05-26 21:02:37.794 CST [27268] LOG:  checkpoint starting: time
+2024-05-26 21:02:38.413 CST [27268] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.602 s, sync=0.009 s, total=0.619 s; sync files=6, longest=0.006 s, average=0.002 s; distance=0 kB, estimate=3527 kB; lsn=0/19CCDE0, redo lsn=0/19CCDA8
+2024-05-26 21:57:38.355 CST [27268] LOG:  checkpoint starting: time
+2024-05-26 21:57:39.276 CST [27268] LOG:  checkpoint complete: wrote 10 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.906 s, sync=0.008 s, total=0.922 s; sync files=10, longest=0.001 s, average=0.001 s; distance=2 kB, estimate=3174 kB; lsn=0/19CD8B0, redo lsn=0/19CD878
+2024-05-26 22:32:38.821 CST [27268] LOG:  checkpoint starting: time
+2024-05-26 22:32:39.137 CST [27268] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.301 s, sync=0.007 s, total=0.316 s; sync files=4, longest=0.005 s, average=0.002 s; distance=1 kB, estimate=2857 kB; lsn=0/19CDD60, redo lsn=0/19CDD28
+2024-05-26 22:37:03.432 CST [27267] LOG:  received fast shutdown request
+2024-05-26 22:37:03.433 CST [27267] LOG:  aborting any active transactions
+2024-05-26 22:37:03.434 CST [27267] LOG:  background worker "logical replication launcher" (PID 27273) exited with exit code 1
+2024-05-26 22:37:03.435 CST [27268] LOG:  shutting down
+2024-05-26 22:37:03.436 CST [27268] LOG:  checkpoint starting: shutdown immediate
+2024-05-26 22:37:03.442 CST [27268] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.003 s, total=0.008 s; sync files=4, longest=0.001 s, average=0.001 s; distance=1 kB, estimate=2571 kB; lsn=0/19CE1B8, redo lsn=0/19CE1B8
+2024-05-26 22:37:03.450 CST [27267] LOG:  database system is shut down

@@ -1,11 +1,17 @@
 defmodule DatabaseFinalWeb.EventLive.Index do
+  alias Phoenix.PubSub
   use DatabaseFinalWeb, :live_view
 
   alias DatabaseFinal.Chat
   alias DatabaseFinal.Chat.Event
 
+  on_mount {DatabaseFinalWeb.UserAuth, :mount_current_user}
+
   @impl true
   def mount(_params, _session, socket) do
+    if connected?(socket), do: PubSub.subscribe(DatabaseFinal.PubSub, "default_room")
+    changeset = Chat.change_event(%Event{}, %{}) |> to_form()
+    socket = assign(socket, msg_input: changeset)
     {:ok, stream(socket, :events, Chat.list_events())}
   end
 
@@ -33,7 +39,11 @@ defmodule DatabaseFinalWeb.EventLive.Index do
   end
 
   @impl true
-  def handle_info({DatabaseFinalWeb.EventLive.FormComponent, {:saved, event}}, socket) do
+  def handle_info({DatabaseFinal.EventLive.FormComponent, {:saved, event}}, socket) do
+    {:noreply, stream_insert(socket, :events, event)}
+  end
+
+  def handle_info({:new_event, event}, socket) do
     {:noreply, stream_insert(socket, :events, event)}
   end
 

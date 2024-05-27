@@ -1,3 +1,4 @@
+<%!--
 <.header>
   Listing Events
   <:actions>
@@ -6,6 +7,21 @@
     </.link>
   </:actions>
 </.header>
+
+
+
+<.modal :if={@live_action in [:new, :edit]} id="event-modal" show on_cancel={JS.patch(~p"/events")}>
+  <.live_component
+    module={DatabaseFinalWeb.EventLive.FormComponent}
+    id={@event.id || :new}
+    title={@page_title}
+    action={@live_action}
+    event={@event}
+    patch={~p"/events"}
+  />
+</.modal>
+
+--%>
 
 <.table
   id="events"
@@ -32,13 +48,15 @@
   </:action>
 </.table>
 
-<.modal :if={@live_action in [:new, :edit]} id="event-modal" show on_cancel={JS.patch(~p"/events")}>
-  <.live_component
-    module={DatabaseFinalWeb.EventLive.FormComponent}
-    id={@event.id || :new}
-    title={@page_title}
-    action={@live_action}
-    event={@event}
-    patch={~p"/events"}
-  />
-</.modal>
+<div class="flex flex-col justify-start items-start rounded-md border shadow-md p-5">
+<%= for {id, event} <- @streams.events do %>
+  <.live_component module={DatabaseFinalWeb.EventLive.MessageBuble} event={event} id={id} />
+<% end %>
+</div>
+
+<.simple_form for={@msg_input} phx-submit="send">
+  <.input field={@msg_input[:content]} label="content" name="content"/>
+  <:actions>
+    <.button>Send</.button>
+  </:actions>
+</.simple_form>

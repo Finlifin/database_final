@@ -5,6 +5,7 @@ defmodule DatabaseFinal.Chat do
 
   import Ecto.Query, warn: false
   alias DatabaseFinal.Repo
+  alias Phoenix.PubSub
 
   alias DatabaseFinal.Chat.Event
 
@@ -50,9 +51,31 @@ defmodule DatabaseFinal.Chat do
 
   """
   def create_event(attrs \\ %{}) do
-    %Event{}
-    |> Event.changeset(attrs)
-    |> Repo.insert()
+    result =
+      %Event{}
+      |> Event.changeset(attrs)
+      |> Repo.insert()
+
+    {_, event} = result
+
+    PubSub.broadcast(DatabaseFinal.PubSub, "default_room", {:new_event, event})
+    result
+  end
+
+  def send_msg(sender, content, room \\ "default") do
+    create_event(%{sender: sender, payload: content, type: "msg", room: room})
+  end
+
+  def create_event_at(room, attrs \\ %{}) do
+    result =
+      %Event{}
+      |> Event.changeset(attrs)
+      |> Repo.insert()
+
+    {_, event} = result
+
+    PubSub.broadcast(DatabaseFinalWeb.PubSub, room, {:new_event, event})
+    result
   end
 
   @doc """
