@@ -1,5 +1,4 @@
 defmodule DatabaseFinalWeb.EventLive.MessageBuble do
-  alias DatabaseFinal.Chat.Event
   use DatabaseFinalWeb, :live_component
   use Timex
 

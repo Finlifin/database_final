@@ -27,3 +27,125 @@
 2024-05-26 22:37:03.436 CST [27268] LOG:  checkpoint starting: shutdown immediate
 2024-05-26 22:37:03.442 CST [27268] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.003 s, total=0.008 s; sync files=4, longest=0.001 s, average=0.001 s; distance=1 kB, estimate=2571 kB; lsn=0/19CE1B8, redo lsn=0/19CE1B8
 2024-05-26 22:37:03.450 CST [27267] LOG:  database system is shut down
+2024-05-27 10:41:22.603 CST [6247] LOG:  starting PostgreSQL 16.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 14.1.1 20240507, 64-bit
+2024-05-27 10:41:22.604 CST [6247] LOG:  listening on IPv6 address "::1", port 5432
+2024-05-27 10:41:22.604 CST [6247] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-05-27 10:41:22.604 CST [6247] LOG:  listening on Unix socket "/run/postgresql/.s.PGSQL.5432"
+2024-05-27 10:41:22.608 CST [6250] LOG:  database system was shut down at 2024-05-26 22:37:03 CST
+2024-05-27 10:41:22.612 CST [6247] LOG:  database system is ready to accept connections
+2024-05-27 10:46:22.707 CST [6248] LOG:  checkpoint starting: time
+2024-05-27 10:46:27.448 CST [6248] LOG:  checkpoint complete: wrote 50 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.717 s, sync=0.017 s, total=4.742 s; sync files=22, longest=0.004 s, average=0.001 s; distance=38 kB, estimate=38 kB; lsn=0/19D7CF8, redo lsn=0/19D7CC0
+2024-05-27 11:20:11.232 CST [6247] LOG:  received fast shutdown request
+2024-05-27 11:20:11.236 CST [6247] LOG:  aborting any active transactions
+2024-05-27 11:20:11.238 CST [6247] LOG:  background worker "logical replication launcher" (PID 6253) exited with exit code 1
+2024-05-27 11:20:11.239 CST [6248] LOG:  shutting down
+2024-05-27 11:20:11.239 CST [6248] LOG:  checkpoint starting: shutdown immediate
+2024-05-27 11:20:11.243 CST [6248] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.005 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=34 kB; lsn=0/19D7DA8, redo lsn=0/19D7DA8
+2024-05-27 11:20:11.249 CST [6247] LOG:  database system is shut down
+2024-05-27 11:26:36.746 CST [14377] LOG:  starting PostgreSQL 16.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 14.1.1 20240507, 64-bit
+2024-05-27 11:26:36.748 CST [14377] LOG:  listening on IPv6 address "::1", port 5432
+2024-05-27 11:26:36.748 CST [14377] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-05-27 11:26:36.749 CST [14377] LOG:  listening on Unix socket "/run/postgresql/.s.PGSQL.5432"
+2024-05-27 11:26:36.753 CST [14380] LOG:  database system was shut down at 2024-05-27 11:20:11 CST
+2024-05-27 11:26:36.758 CST [14377] LOG:  database system is ready to accept connections
+2024-05-27 11:31:36.852 CST [14378] LOG:  checkpoint starting: time
+2024-05-27 11:31:37.479 CST [14378] LOG:  checkpoint complete: wrote 9 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.602 s, sync=0.011 s, total=0.628 s; sync files=8, longest=0.005 s, average=0.002 s; distance=3 kB, estimate=3 kB; lsn=0/19D8AA8, redo lsn=0/19D8A70
+2024-05-27 11:46:36.778 CST [14378] LOG:  checkpoint starting: time
+2024-05-27 11:46:37.096 CST [14378] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.301 s, sync=0.008 s, total=0.318 s; sync files=4, longest=0.005 s, average=0.002 s; distance=2 kB, estimate=3 kB; lsn=0/19D9388, redo lsn=0/19D9350
+2024-05-27 11:51:36.165 CST [14378] LOG:  checkpoint starting: time
+2024-05-27 11:51:36.482 CST [14378] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.008 s, total=0.318 s; sync files=4, longest=0.005 s, average=0.002 s; distance=1 kB, estimate=2 kB; lsn=0/19D9A70, redo lsn=0/19D9A38
+2024-05-27 11:56:36.581 CST [14378] LOG:  checkpoint starting: time
+2024-05-27 11:56:36.898 CST [14378] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.301 s, sync=0.007 s, total=0.317 s; sync files=4, longest=0.005 s, average=0.002 s; distance=1 kB, estimate=2 kB; lsn=0/19DA190, redo lsn=0/19DA158
+2024-05-27 13:07:34.589 CST [14377] LOG:  received smart shutdown request
+2024-05-27 13:07:34.591 CST [14377] LOG:  received SIGHUP, reloading configuration files
+2024-05-27 13:07:34.592 CST [14377] LOG:  background worker "logical replication launcher" (PID 14383) exited with exit code 1
+2024-05-27 13:07:34.593 CST [14378] LOG:  shutting down
+2024-05-27 13:07:34.595 CST [14378] LOG:  checkpoint starting: shutdown immediate
+2024-05-27 13:07:34.698 CST [14378] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.106 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=2 kB; lsn=0/19DA240, redo lsn=0/19DA240
+2024-05-27 13:07:34.705 CST [14377] LOG:  database system is shut down
+2024-05-27 16:07:27.864 CST [2651] LOG:  starting PostgreSQL 16.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 14.1.1 20240507, 64-bit
+2024-05-27 16:07:27.865 CST [2651] LOG:  listening on IPv6 address "::1", port 5432
+2024-05-27 16:07:27.865 CST [2651] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-05-27 16:07:27.865 CST [2651] LOG:  listening on Unix socket "/run/postgresql/.s.PGSQL.5432"
+2024-05-27 16:07:27.869 CST [2654] LOG:  database system was shut down at 2024-05-27 13:07:34 CST
+2024-05-27 16:07:27.874 CST [2651] LOG:  database system is ready to accept connections
+2024-05-27 16:12:27.968 CST [2652] LOG:  checkpoint starting: time
+2024-05-27 16:12:27.979 CST [2652] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.002 s, total=0.011 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/19DA328, redo lsn=0/19DA2F0
+2024-05-27 16:27:28.278 CST [2652] LOG:  checkpoint starting: time
+2024-05-27 16:27:28.796 CST [2652] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.502 s, sync=0.008 s, total=0.518 s; sync files=5, longest=0.005 s, average=0.002 s; distance=1 kB, estimate=1 kB; lsn=0/19DA7D0, redo lsn=0/19DA798
+2024-05-27 16:32:28.896 CST [2652] LOG:  checkpoint starting: time
+2024-05-27 16:32:29.212 CST [2652] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.301 s, sync=0.007 s, total=0.317 s; sync files=4, longest=0.005 s, average=0.002 s; distance=2 kB, estimate=2 kB; lsn=0/19DB0B8, redo lsn=0/19DB080
+2024-05-27 16:37:28.312 CST [2652] LOG:  checkpoint starting: time
+2024-05-27 16:37:28.931 CST [2652] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.602 s, sync=0.009 s, total=0.619 s; sync files=6, longest=0.005 s, average=0.002 s; distance=0 kB, estimate=2 kB; lsn=0/19DB368, redo lsn=0/19DB330
+2024-05-27 16:47:29.131 CST [2652] LOG:  checkpoint starting: time
+2024-05-27 16:47:29.447 CST [2652] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.301 s, sync=0.007 s, total=0.317 s; sync files=4, longest=0.005 s, average=0.002 s; distance=1 kB, estimate=1 kB; lsn=0/19DB778, redo lsn=0/19DB740
+2024-05-27 16:50:17.234 CST [2894] ERROR:  column "rooms.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2024-05-27 16:50:17.234 CST [2894] STATEMENT:  select * from rooms group by room_name
+2024-05-27 16:52:29.547 CST [2652] LOG:  checkpoint starting: time
+2024-05-27 16:52:29.863 CST [2652] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.301 s, sync=0.007 s, total=0.316 s; sync files=4, longest=0.005 s, average=0.002 s; distance=1 kB, estimate=1 kB; lsn=0/19DBE00, redo lsn=0/19DBDC8
+2024-05-27 16:57:29.963 CST [2652] LOG:  checkpoint starting: time
+2024-05-27 16:57:30.279 CST [2652] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.301 s, sync=0.007 s, total=0.317 s; sync files=4, longest=0.005 s, average=0.002 s; distance=1 kB, estimate=1 kB; lsn=0/19DC338, redo lsn=0/19DC300
+2024-05-27 17:02:29.378 CST [2652] LOG:  checkpoint starting: time
+2024-05-27 17:02:30.300 CST [2652] LOG:  checkpoint complete: wrote 10 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.903 s, sync=0.011 s, total=0.922 s; sync files=10, longest=0.005 s, average=0.002 s; distance=4 kB, estimate=4 kB; lsn=0/19DD478, redo lsn=0/19DD440
+2024-05-27 17:32:29.731 CST [2652] LOG:  checkpoint starting: time
+2024-05-27 17:32:30.653 CST [2652] LOG:  checkpoint complete: wrote 10 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.907 s, sync=0.008 s, total=0.922 s; sync files=10, longest=0.002 s, average=0.001 s; distance=4 kB, estimate=4 kB; lsn=0/19DE730, redo lsn=0/19DE6F8
+2024-05-27 17:37:29.753 CST [2652] LOG:  checkpoint starting: time
+2024-05-27 17:37:30.671 CST [2652] LOG:  checkpoint complete: wrote 10 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.903 s, sync=0.007 s, total=0.918 s; sync files=10, longest=0.001 s, average=0.001 s; distance=5 kB, estimate=5 kB; lsn=0/19DFC38, redo lsn=0/19DFC00
+2024-05-27 17:47:29.868 CST [2652] LOG:  checkpoint starting: time
+2024-05-27 17:47:30.184 CST [2652] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.301 s, sync=0.007 s, total=0.316 s; sync files=4, longest=0.005 s, average=0.002 s; distance=3 kB, estimate=5 kB; lsn=0/19E0970, redo lsn=0/19E0938
+2024-05-27 19:57:14.124 CST [2651] LOG:  received fast shutdown request
+2024-05-27 19:57:14.125 CST [2651] LOG:  aborting any active transactions
+2024-05-27 19:57:14.129 CST [2651] LOG:  background worker "logical replication launcher" (PID 2657) exited with exit code 1
+2024-05-27 19:57:14.129 CST [2652] LOG:  shutting down
+2024-05-27 19:57:14.130 CST [2652] LOG:  checkpoint starting: shutdown immediate
+2024-05-27 19:57:14.138 CST [2652] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.004 s, total=0.009 s; sync files=4, longest=0.002 s, average=0.001 s; distance=2 kB, estimate=4 kB; lsn=0/19E14B8, redo lsn=0/19E14B8
+2024-05-27 19:57:14.143 CST [2651] LOG:  database system is shut down
+2024-05-28 15:52:42.442 CST [5060] LOG:  starting PostgreSQL 16.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 14.1.1 20240507, 64-bit
+2024-05-28 15:52:42.443 CST [5060] LOG:  listening on IPv6 address "::1", port 5432
+2024-05-28 15:52:42.443 CST [5060] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-05-28 15:52:42.444 CST [5060] LOG:  listening on Unix socket "/run/postgresql/.s.PGSQL.5432"
+2024-05-28 15:52:42.447 CST [5063] LOG:  database system was shut down at 2024-05-27 19:57:14 CST
+2024-05-28 15:52:42.453 CST [5060] LOG:  database system is ready to accept connections
+2024-05-28 15:57:42.547 CST [5061] LOG:  checkpoint starting: time
+2024-05-28 15:57:43.471 CST [5061] LOG:  checkpoint complete: wrote 12 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.903 s, sync=0.013 s, total=0.925 s; sync files=11, longest=0.005 s, average=0.002 s; distance=8 kB, estimate=8 kB; lsn=0/19E3508, redo lsn=0/19E34D0
+2024-05-28 16:02:42.571 CST [5061] LOG:  checkpoint starting: time
+2024-05-28 16:02:42.887 CST [5061] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.007 s, total=0.317 s; sync files=4, longest=0.005 s, average=0.002 s; distance=3 kB, estimate=7 kB; lsn=0/19E4440, redo lsn=0/19E4408
+2024-05-28 16:07:42.987 CST [5061] LOG:  checkpoint starting: time
+2024-05-28 16:07:43.299 CST [5061] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.003 s, total=0.312 s; sync files=4, longest=0.001 s, average=0.001 s; distance=3 kB, estimate=7 kB; lsn=0/19E5368, redo lsn=0/19E5330
+2024-05-28 16:27:42.698 CST [5061] LOG:  checkpoint starting: time
+2024-05-28 16:27:43.014 CST [5061] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.007 s, total=0.317 s; sync files=4, longest=0.005 s, average=0.002 s; distance=4 kB, estimate=6 kB; lsn=0/19E6748, redo lsn=0/19E6710
+2024-05-28 16:37:42.211 CST [5061] LOG:  checkpoint starting: time
+2024-05-28 16:37:42.830 CST [5061] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.602 s, sync=0.009 s, total=0.620 s; sync files=7, longest=0.005 s, average=0.002 s; distance=4 kB, estimate=6 kB; lsn=0/19E7AD8, redo lsn=0/19E7AA0
+2024-05-28 16:47:43.028 CST [5061] LOG:  checkpoint starting: time
+2024-05-28 16:47:43.344 CST [5061] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.007 s, total=0.317 s; sync files=4, longest=0.005 s, average=0.002 s; distance=4 kB, estimate=6 kB; lsn=0/19E8C48, redo lsn=0/19E8C10
+2024-05-28 16:52:43.444 CST [5061] LOG:  checkpoint starting: time
+2024-05-28 16:52:43.550 CST [5061] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.101 s, sync=0.002 s, total=0.106 s; sync files=2, longest=0.001 s, average=0.001 s; distance=2 kB, estimate=6 kB; lsn=0/19E9490, redo lsn=0/19E9458
+2024-05-28 17:22:43.945 CST [5061] LOG:  checkpoint starting: time
+2024-05-28 17:22:44.362 CST [5061] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.402 s, sync=0.008 s, total=0.417 s; sync files=5, longest=0.005 s, average=0.002 s; distance=1 kB, estimate=5 kB; lsn=0/19E9AF8, redo lsn=0/19E9AC0
+2024-05-28 17:27:43.462 CST [5061] LOG:  checkpoint starting: time
+2024-05-28 17:27:43.773 CST [5061] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.301 s, sync=0.007 s, total=0.312 s; sync files=4, longest=0.005 s, average=0.002 s; distance=1 kB, estimate=5 kB; lsn=0/19EA2E8, redo lsn=0/19EA2B0
+2024-05-28 17:37:43.973 CST [5061] LOG:  checkpoint starting: time
+2024-05-28 17:37:44.993 CST [5061] LOG:  checkpoint complete: wrote 11 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.003 s, sync=0.012 s, total=1.020 s; sync files=11, longest=0.005 s, average=0.002 s; distance=8 kB, estimate=8 kB; lsn=0/19EC3B8, redo lsn=0/19EC380
+2024-05-28 17:42:44.091 CST [5061] LOG:  checkpoint starting: time
+2024-05-28 17:42:45.010 CST [5061] LOG:  checkpoint complete: wrote 10 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.903 s, sync=0.009 s, total=0.920 s; sync files=10, longest=0.002 s, average=0.001 s; distance=6 kB, estimate=8 kB; lsn=0/19EDD38, redo lsn=0/19EDD00
+2024-05-28 17:47:44.107 CST [5061] LOG:  checkpoint starting: time
+2024-05-28 17:47:45.029 CST [5061] LOG:  checkpoint complete: wrote 10 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.903 s, sync=0.011 s, total=0.922 s; sync files=10, longest=0.005 s, average=0.002 s; distance=9 kB, estimate=9 kB; lsn=0/19F0198, redo lsn=0/19F0160
+2024-05-28 17:50:54.463 CST [13961] ERROR:  syntax error at or near "ls" at character 1
+2024-05-28 17:50:54.463 CST [13961] STATEMENT:  ls
+2024-05-28 17:50:56.945 CST [13961] ERROR:  syntax error at or near "ls" at character 1
+2024-05-28 17:50:56.945 CST [13961] STATEMENT:  ls
+2024-05-28 17:52:44.105 CST [5061] LOG:  checkpoint starting: time
+2024-05-28 17:52:45.329 CST [5061] LOG:  checkpoint complete: wrote 13 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.207 s, sync=0.010 s, total=1.225 s; sync files=13, longest=0.001 s, average=0.001 s; distance=11 kB, estimate=11 kB; lsn=0/19F3178, redo lsn=0/19F3140
+2024-05-28 17:52:54.468 CST [13961] ERROR:  cannot truncate a table referenced in a foreign key constraint
+2024-05-28 17:52:54.468 CST [13961] DETAIL:  Table "users_tokens" references "users".
+2024-05-28 17:52:54.468 CST [13961] HINT:  Truncate table "users_tokens" at the same time, or use TRUNCATE ... CASCADE.
+2024-05-28 17:52:54.468 CST [13961] STATEMENT:  truncate users
+2024-05-28 17:57:44.427 CST [5061] LOG:  checkpoint starting: time
+2024-05-28 17:57:47.061 CST [5061] LOG:  checkpoint complete: wrote 27 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.610 s, sync=0.015 s, total=2.634 s; sync files=26, longest=0.001 s, average=0.001 s; distance=44 kB, estimate=44 kB; lsn=0/19FE2A8, redo lsn=0/19FE270
+2024-05-28 18:28:07.585 CST [5060] LOG:  received fast shutdown request
+2024-05-28 18:28:07.587 CST [5060] LOG:  aborting any active transactions
+2024-05-28 18:28:07.589 CST [5060] LOG:  background worker "logical replication launcher" (PID 5066) exited with exit code 1
+2024-05-28 18:28:07.590 CST [5061] LOG:  shutting down
+2024-05-28 18:28:07.591 CST [5061] LOG:  checkpoint starting: shutdown immediate
+2024-05-28 18:28:07.600 CST [5061] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.002 s, total=0.011 s; sync files=1, longest=0.002 s, average=0.002 s; distance=0 kB, estimate=39 kB; lsn=0/19FE358, redo lsn=0/19FE358
+2024-05-28 18:28:07.606 CST [5060] LOG:  database system is shut down

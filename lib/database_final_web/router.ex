@@ -21,7 +21,7 @@ defmodule DatabaseFinalWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
-    live "/events", EventLive.Index, :index
+    live "/room", EventLive.Index, :index
     live "/events/new", EventLive.Index, :new
     live "/events/:id/edit", EventLive.Index, :edit
 

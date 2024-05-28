@@ -4,9 +4,10 @@ defmodule DatabaseFinal.Chat do
   """
 
   import Ecto.Query, warn: false
+  alias DatabaseFinal.UserInfo
+  alias DatabaseFinal.Chat.Room
   alias DatabaseFinal.Repo
   alias Phoenix.PubSub
-
   alias DatabaseFinal.Chat.Event
 
   @doc """
@@ -20,6 +21,10 @@ defmodule DatabaseFinal.Chat do
   """
   def list_events do
     Repo.all(Event)
+  end
+
+  def list_last_events(x) do
+    Repo.all(from(Event, limit: ^x))
   end
 
   @doc """
@@ -58,7 +63,7 @@ defmodule DatabaseFinal.Chat do
 
     {_, event} = result
 
-    PubSub.broadcast(DatabaseFinal.PubSub, "default_room", {:new_event, event})
+    PubSub.broadcast(DatabaseFinal.PubSub, "event-channel", {:new_event, event})
     result
   end
 
@@ -74,7 +79,7 @@ defmodule DatabaseFinal.Chat do
 
     {_, event} = result
 
-    PubSub.broadcast(DatabaseFinalWeb.PubSub, room, {:new_event, event})
+    PubSub.broadcast(DatabaseFinal.PubSub, room, {:new_event, event})
     result
   end
 
@@ -123,5 +128,48 @@ defmodule DatabaseFinal.Chat do
   """
   def change_event(%Event{} = event, attrs \\ %{}) do
     Event.changeset(event, attrs)
+  end
+
+  def join_room(user, room) do
+    result =
+      %Room{}
+      |> Room.changeset(%{user_id: user.id, room_name: room})
+      |> Repo.insert()
+
+    {_, room} = result
+
+    PubSub.broadcast(DatabaseFinal.PubSub, "event-channel", {:join_room, room})
+    result
+  end
+
+  def leave_room(_user, _room) do
+  end
+
+  def list_rooms() do
+    from(p in Room, group_by: p.room_name, select: [p.room_name])
+    |> Repo.all()
+    |> Enum.concat()
+  end
+
+  def create_user_info(attrs \\ %{}) do
+    if check_if_email_not_exit(attrs["email"]) do
+      %UserInfo{}
+      |> UserInfo.changeset(attrs)
+      |> Repo.insert()
+    else
+      {:error, "This email has been registered"}
+    end
+  end
+
+  def check_if_email_not_exit(email) do
+    Repo.get_by(UserInfo, email: email) |> is_nil()
+  end
+
+  def userinfo_from_id(id) do
+    Repo.get(UserInfo, id)
+  end
+
+  def userinfo_from_email(email) do
+    Repo.get_by(UserInfo, email: email)
   end
 end

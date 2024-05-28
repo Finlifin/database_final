@@ -15,6 +15,6 @@ defmodule DatabaseFinal.UserInfo do
   def changeset(user_info, attrs) do
     user_info
     |> cast(attrs, [:name, :bio, :email, :avatar])
-    |> validate_required([:name, :bio, :email, :avatar])
+    |> validate_required([:name, :email])
   end
 end
