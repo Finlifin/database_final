@@ -23,7 +23,7 @@ defmodule DatabaseFinalWeb.EventLive.Index do
       |> assign(msg_input: changeset)
       |> assign(current_room: room)
       |> assign(current_user_info: current_user_info)
-      |> assign(rooms: rooms)
+      |> stream(:rooms, rooms)
       |> assign(page_title: "default")
       |> stream(:events, Chat.list_last_events(10) |> Enum.filter(&(&1.room == room)))
       |> push_event("scroll-down", %{})

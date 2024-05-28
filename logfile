@@ -149,3 +149,40 @@
 2024-05-28 18:28:07.591 CST [5061] LOG:  checkpoint starting: shutdown immediate
 2024-05-28 18:28:07.600 CST [5061] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.002 s, total=0.011 s; sync files=1, longest=0.002 s, average=0.002 s; distance=0 kB, estimate=39 kB; lsn=0/19FE358, redo lsn=0/19FE358
 2024-05-28 18:28:07.606 CST [5060] LOG:  database system is shut down
+2024-05-28 18:29:51.241 CST [2453] LOG:  starting PostgreSQL 16.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 14.1.1 20240507, 64-bit
+2024-05-28 18:29:51.242 CST [2453] LOG:  listening on IPv6 address "::1", port 5432
+2024-05-28 18:29:51.242 CST [2453] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-05-28 18:29:51.242 CST [2453] FATAL:  could not create lock file "/run/postgresql/.s.PGSQL.5432.lock": No such file or directory
+2024-05-28 18:29:51.244 CST [2453] LOG:  database system is shut down
+2024-05-28 18:29:59.382 CST [2494] LOG:  starting PostgreSQL 16.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 14.1.1 20240507, 64-bit
+2024-05-28 18:29:59.383 CST [2494] LOG:  listening on IPv6 address "::1", port 5432
+2024-05-28 18:29:59.383 CST [2494] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-05-28 18:29:59.384 CST [2494] LOG:  listening on Unix socket "/run/postgresql/.s.PGSQL.5432"
+2024-05-28 18:29:59.387 CST [2497] LOG:  database system was shut down at 2024-05-28 18:28:07 CST
+2024-05-28 18:29:59.392 CST [2494] LOG:  database system is ready to accept connections
+2024-05-28 18:34:59.389 CST [2495] LOG:  checkpoint starting: time
+2024-05-28 18:35:00.138 CST [2495] LOG:  checkpoint complete: wrote 10 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.703 s, sync=0.010 s, total=0.750 s; sync files=9, longest=0.005 s, average=0.002 s; distance=2 kB, estimate=2 kB; lsn=0/19FEE18, redo lsn=0/19FEDE0
+2024-05-28 19:29:30.960 CST [2494] LOG:  received fast shutdown request
+2024-05-28 19:29:30.993 CST [2494] LOG:  aborting any active transactions
+2024-05-28 19:29:30.995 CST [2494] LOG:  background worker "logical replication launcher" (PID 2500) exited with exit code 1
+2024-05-28 19:29:30.995 CST [2495] LOG:  shutting down
+2024-05-28 19:29:30.996 CST [2495] LOG:  checkpoint starting: shutdown immediate
+2024-05-28 19:29:31.001 CST [2495] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.006 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=2 kB; lsn=0/19FEEC8, redo lsn=0/19FEEC8
+2024-05-28 19:29:31.006 CST [2494] LOG:  database system is shut down
+2024-05-28 20:56:16.032 CST [9853] LOG:  starting PostgreSQL 16.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 14.1.1 20240507, 64-bit
+2024-05-28 20:56:16.034 CST [9853] LOG:  listening on IPv6 address "::1", port 5432
+2024-05-28 20:56:16.034 CST [9853] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-05-28 20:56:16.035 CST [9853] LOG:  listening on Unix socket "/run/postgresql/.s.PGSQL.5432"
+2024-05-28 20:56:16.039 CST [9856] LOG:  database system was shut down at 2024-05-28 19:29:30 CST
+2024-05-28 20:56:16.045 CST [9853] LOG:  database system is ready to accept connections
+2024-05-28 21:01:16.136 CST [9854] LOG:  checkpoint starting: time
+2024-05-28 21:01:16.757 CST [9854] LOG:  checkpoint complete: wrote 9 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.603 s, sync=0.010 s, total=0.622 s; sync files=8, longest=0.005 s, average=0.002 s; distance=2 kB, estimate=2 kB; lsn=0/19FF918, redo lsn=0/19FF8E0
+2024-05-28 21:55:44.486 CST [14560] ERROR:  column e0.content does not exist at character 127
+2024-05-28 21:55:44.486 CST [14560] STATEMENT:  SELECT e0."id", e0."type", e0."payload", e0."sender", e0."room", e0."inserted_at", e0."updated_at" FROM "events" AS e0 WHERE (e0."content" LIKE '%hello%')
+2024-05-28 22:22:56.985 CST [9853] LOG:  received fast shutdown request
+2024-05-28 22:22:56.985 CST [9853] LOG:  aborting any active transactions
+2024-05-28 22:22:56.988 CST [9853] LOG:  background worker "logical replication launcher" (PID 9859) exited with exit code 1
+2024-05-28 22:22:56.989 CST [9854] LOG:  shutting down
+2024-05-28 22:22:56.990 CST [9854] LOG:  checkpoint starting: shutdown immediate
+2024-05-28 22:22:56.998 CST [9854] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.001 s, total=0.009 s; sync files=1, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=2 kB; lsn=0/19FF9C8, redo lsn=0/19FF9C8
+2024-05-28 22:22:57.003 CST [9853] LOG:  database system is shut down

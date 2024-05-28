@@ -93,6 +93,6 @@
   </:actions>
 </.simple_form>
 
-<div :for={{id, room} <- @rooms} id={id} phx-update="stream" class="bg-black h-3">
+<div :for={{id, room} <- @streams.rooms} id={id} phx-update="stream" class="bg-black h-3">
   <%= room %>
 </div>

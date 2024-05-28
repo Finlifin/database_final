@@ -172,4 +172,13 @@ defmodule DatabaseFinal.Chat do
   def userinfo_from_email(email) do
     Repo.get_by(UserInfo, email: email)
   end
+
+  def search_msg(user, content, limit \\ 20) do
+    Event
+    |> where([e], like(e.payload, ^"%#{content}%"))
+    |> where([e], e.type == :msg)
+    |> where([e], e.sender == ^userinfo_from_email(user.email).name)
+    |> limit(^limit)
+    |> Repo.all()
+  end
 end
