@@ -20,7 +20,7 @@ defmodule DatabaseFinalWeb.Router do
   scope "/", DatabaseFinalWeb do
     pipe_through :browser
 
-    live "/", EventLive.Index, :index
+    live "/", Search
     live "/room", EventLive.Index, :index
     live "/search", Search
     live "/events/new", EventLive.Index, :new

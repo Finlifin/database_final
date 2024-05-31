@@ -130,10 +130,14 @@ defmodule DatabaseFinal.Chat do
     Event.changeset(event, attrs)
   end
 
-  def join_room(user, room) do
+  def change_room(%Room{} = room, attrs \\ %{}) do
+    Room.changeset(room, attrs)
+  end
+
+  def join_room(id, room) do
     result =
       %Room{}
-      |> Room.changeset(%{user_id: user.id, room_name: room})
+      |> Room.changeset(%{user_id: id, room_name: room})
       |> Repo.insert()
 
     {_, room} = result
@@ -142,13 +146,36 @@ defmodule DatabaseFinal.Chat do
     result
   end
 
+  def connect_to_user(current_user, target_user_email) do
+    case userinfo_from_email(target_user_email) do
+      nil ->
+        nil
+
+      %{name: target_user_name, id: target_user_id} ->
+        %{name: name, id: id} = userinfo_from_id(current_user.id)
+        join_room(id, "#{name}:#{target_user_name}")
+        join_room(target_user_id, "#{name}:#{target_user_name}")
+    end
+  end
+
+  def user_in_room?(id, room) do
+    result =
+      Room
+      |> where([r], r.user_id == ^id)
+      |> where([r], r.room_name == ^room)
+      |> Repo.all()
+
+    result != []
+  end
+
   def leave_room(_user, _room) do
   end
 
-  def list_rooms() do
-    from(p in Room, group_by: p.room_name, select: [p.room_name])
+  def list_rooms(id) do
+    from(p in Room, group_by: p.room_name, select: [p.room_name], where: p.user_id == ^id)
     |> Repo.all()
     |> Enum.concat()
+    |> Enum.map(&%{id: &1, name: &1})
   end
 
   def create_user_info(attrs \\ %{}) do
